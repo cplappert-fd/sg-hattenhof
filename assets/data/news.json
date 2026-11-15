@@ -1,0 +1,60 @@
+{
+  "featured": {
+    "title": "Einladung zur Jahreshauptversammlung 2026",
+    "excerpt": "Der Vorstand der SG Hattenhof lädt alle Mitglieder herzlich zur ordentlichen Jahreshauptversammlung ein. Auf der Tagesordnung stehen neben den Berichten des Vorstands und der Abteilungen auch Wahlen und Anträge.",
+    "date": "2026-02-08",
+    "category": "VEREINSLEBEN",
+    "image": "assets/images/news-jhv-2026-800.webp",
+    "url": "news.html#jahreshauptversammlung-2026"
+  },
+  "latest": [
+    {
+      "title": "Saisonstart Fußball: Neue Trikots für die Erste",
+      "excerpt": "Dank der Unterstützung lokaler Sponsoren läuft die 1. Mannschaft in der neuen Saison in frischen schwarz-weißen Trikots auf. Der Vereinswappen prangt stolz auf der Brust.",
+      "date": "2026-08-15",
+      "category": "FUSSBALL",
+      "image": "assets/images/news-trikots.svg",
+      "url": "news.html#saisonstart-fussball-neue-trikots"
+    },
+    {
+      "title": "Tennis: Jugendtraining startet nach den Ferien",
+      "excerpt": "Ab September bietet die Tennisabteilung wieder wöchentliches Training für Kinder und Jugendliche an. Anmeldungen sind ab sofort über die Abteilungsleitung möglich.",
+      "date": "2026-08-01",
+      "category": "TENNIS",
+      "image": "assets/images/news-tennis-jugend.svg",
+      "url": "news.html#tennis-jugendtraining-nach-den-ferien"
+    },
+    {
+      "title": "Tischtennis: Drei Herrenmannschaften gemeldet",
+      "excerpt": "Für die Spielzeit 2026/27 gehen drei Herrenmannschaften der SG Hattenhof an den Start. Gastspieler sind beim Training mittwochs ab 19 Uhr herzlich willkommen.",
+      "date": "2026-07-20",
+      "category": "TISCHTENNIS",
+      "image": "assets/images/news-tt-mannschaften.svg",
+      "url": "news.html#tischtennis-drei-herrenmannschaften"
+    },
+    {
+      "title": "Damengymnastik: Neues Pilates-Angebot",
+      "excerpt": "Ab Herbst erweitert die Damengymnastik ihr Programm um einen wöchentlichen Pilates-Kurs. Vorkenntnisse sind nicht erforderlich – einfach vorbeikommen und mitmachen.",
+      "date": "2026-07-10",
+      "category": "GYMNASTIK",
+      "image": "assets/images/news-pilates.svg",
+      "url": "news.html#damengymnastik-neues-pilates-angebot"
+    },
+    {
+      "title": "Kinderturnen: Schnuppertage im September",
+      "excerpt": "Zum Start des neuen Turnjahres veranstaltet die Kinderturnabteilung offene Schnuppertage. Eltern und Kinder können das Angebot unverbindlich kennenlernen.",
+      "date": "2026-06-25",
+      "category": "KINDERTURNEN",
+      "image": "assets/images/news-kinderturnen.svg",
+      "url": "news.html#kinderturnen-schnuppertage-im-september"
+    },
+    {
+      "title": "Volleyball: Trainingszeiten für die Hallensaison",
+      "excerpt": "Die Volleyballabteilung hat die Trainingszeiten für die kommende Hallensaison festgelegt. Neu: Ein zusätzlicher Termin für Freizeitspieler am Freitagabend.",
+      "date": "2026-06-10",
+      "category": "VOLLEYBALL",
+      "image": "assets/images/news-volleyball.svg",
+      "url": "news.html#volleyball-trainingszeiten-hallensaison"
+    }
+  ]
+}

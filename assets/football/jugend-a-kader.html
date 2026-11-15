@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="scripts/update-football.js">
+<link rel="stylesheet" href="https://www.fussball.de/static/por/8.92.0.1/css/style.css">
+<style>
+
+html, body { margin: 0; padding: 0; background: #fff; }
+body { padding: 14px 16px; font: 13px/1.45 Arial, Helvetica, sans-serif; color: #20272c; overflow-x: auto; }
+.fbde-snapshot .table-container { border: 0; box-shadow: none; margin: 0; }
+.fbde-snapshot .team-matchplan-table-nav,
+.fbde-snapshot .filter-toggle,
+.fbde-snapshot .filter-content form,
+.fbde-snapshot .table-meta,
+.fbde-snapshot .legend,
+.fbde-snapshot .team_squad_tab_group,
+.fbde-snapshot .profile-edit,
+.fbde-snapshot .print,
+.fbde-snapshot .no-print,
+.fbde-snapshot .wm-container,
+.fbde-snapshot [data-wm-type],
+.fbde-snapshot .wm-iframe { display: none !important; }
+.fbde-snapshot .filter-content { display: block !important; }
+.fbde-snapshot .filter-message { display: block !important; margin: 10px 0; }
+.fbde-snapshot .filter-message .headline { display: block !important; }
+.fbde-snapshot .filter-message .headline { margin: 0; font-weight: 600; }
+.fbde-snapshot .filter-message .button { display: none !important; }
+.fbde-snapshot table { width: 100%; border-collapse: collapse; }
+.fbde-snapshot th,
+.fbde-snapshot td { padding: 7px 8px; border-bottom: 1px solid #e4e9ec; text-align: left; vertical-align: top; }
+.fbde-snapshot th { background: #f4f7f8; font-weight: 700; }
+.fbde-snapshot a { color: #008c8c; text-decoration: none; }
+.fbde-snapshot .player-name { font-weight: 600; }
+.fbde-snapshot-date { margin: 0 0 8px; color: #65717a; font-size: 11px; }
+</style>
+</head>
+<body class="fbde fbde-snapshot">
+<div class="fbde-snapshot-date">Datenstand: 15.11.2026</div>
+<div id="team-squad-wrapper">
+	<div class="team_squad_tab_group">
+		<div data-toggle="li a" data-ng-controller="AjaxController" data-type="ajax" class="tab-group" data-tab-group>
+			<a class="prev"><span class="icon-angle-left"></span></a>
+			<ul>
+				<li class="on">
+					<a data-tracking-name="mannschaft_kader/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" data-tracking-pagename-short="mannschaft" data-tracking-channel="vereine_verbaende" data-ajax-type="html" data-tracking-pagename-long="mannschaft_kader" data-ajax-target="#team-squad-wrapper" data-ajax-resource="https://www.fussball.de/ajax.team.squad/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" href="https://www.fussball.de/ajax.team.squad/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" data-tracking-enabled="" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU'}" data-ajax>Kader</a>
+				</li>
+				<li>
+					<a data-tracking-name="mannschaft_neuzugaenge/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" data-tracking-pagename-short="mannschaft" data-tracking-channel="vereine_verbaende" data-ajax-type="html" data-tracking-pagename-long="mannschaft_neuzugaenge" data-ajax-target="#team-squad-wrapper" data-ajax-resource="https://www.fussball.de/ajax.team.squad.arrivals/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" href="https://www.fussball.de/ajax.team.squad.arrivals/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" data-tracking-enabled="" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad.arrivals/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU'}" data-ajax>Neuzugänge</a>
+				</li>
+				<li>
+					<a data-tracking-name="mannschaft_abgaenge/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" data-tracking-pagename-short="mannschaft" data-tracking-channel="vereine_verbaende" data-ajax-type="html" data-tracking-pagename-long="mannschaft_abgaenge" data-ajax-target="#team-squad-wrapper" data-ajax-resource="https://www.fussball.de/ajax.team.squad.departures/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" href="https://www.fussball.de/ajax.team.squad.departures/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" data-tracking-enabled="" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad.departures/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02M5ABDATS000000VS5489B2VUHJA7LU'}" data-ajax>Abgänge</a>
+				</li>
+			</ul>
+			<a class="next"><span class="icon-angle-right"></span></a>
+		</div>
+	</div>
+	<div>
+		<div class="team-squad-table">
+			<div data-toggle=".filter-toggle" data-ng-controller="AjaxController" class="team-squad-filter-nav table-filter">
+				<div class="filter-toggle">Filter<span class="icon-close"></span></div>
+				<div class="filter-content">
+					<div class="row">
+						<form data-ajax-type="html" data-ajax-target="#team-squad-wrapper" data-ajax-defaults="{'saison':'26/27', 'order-by': '1'}" data-ajax-resource="https://www.fussball.de/ajax.team.squad/-/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" data-ajax="replace" data-ajax-method="post" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad/-/team-id/02M5ABDATS000000VS5489B2VUHJA7LU'}">
+							<div data-select-box="single" data-select-box-default="0" data-select-title="Saison" class="select-wrapper" data-ajaxmodel="saison">
+								<select size="1" name="saison">
+									<option value="2627" class="selected" selected="selected">2026/2027</option>
+									<option value="2526">2025/2026</option>
+									<option value="2425">2024/2025</option>
+								</select>
+							</div>
+							<div data-select-box="single" data-select-box-default="0" data-select-title="Sortiert nach" class="select-wrapper" data-ajaxmodel="order-by">
+								<select size="1" name="order-by">
+									<option value="1" class="selected" selected="selected">Einsätze</option>
+									<option value="2">Spieler</option>
+									<option value="5">Einsatzminuten</option>
+									<option value="6">Tore</option>
+								</select>
+							</div>
+							<button type="submit" class="button button-primary">Los</button>
+						</form>
+					</div>
+				</div>
+				<div class="filter-message">
+					<div class="row">
+						<p class="headline">Die Kaderliste ist bisher nicht zur Veröffentlichung freigegeben.</p>
+						<span data-user-dependency="{'FBDE_PROFILES':'inarray'}" data-user="{'FBDE_PROFILES':'TEAMADMIN'}"><a data-user-dependency="{'FBDE_SA_TEAMS':'inarray'}" data-user="{'FBDE_SA_TEAMS':'02M5ABDATS000000VS5489B2VUHJA7LU'}" href="https://www.fussball.de/my.mannschaft.bearbeiten/-/action/SQUAD_PUBLISH_OPEN/team-id/02M5ABDATS000000VS5489B2VUHJA7LU" class="button button-primary button-small"><span>Kader veröffentlichen</span></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+document.querySelectorAll('[data-obfuscation]').forEach(function (el) {
+  el.classList.add('results-c-' + el.dataset.obfuscation);
+});
+document.querySelectorAll('.filter-message .button').forEach(function (el) {
+  el.style.setProperty('display', 'none', 'important');
+});
+if (!document.querySelector('.filter-message') && document.querySelectorAll('table tr').length <= 1) {
+  var div = document.createElement('div');
+  div.className = 'team-squad-filter-nav table-filter';
+  div.innerHTML = '<div class="filter-message"><div class="row"><p class="headline">Keine Einträge vorhanden.</p></div></div>';
+  document.body.appendChild(div);
+}
+</script>
+</body>
+</html>

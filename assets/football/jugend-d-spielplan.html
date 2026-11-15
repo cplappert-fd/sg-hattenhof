@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="scripts/update-football.js">
+<link rel="stylesheet" href="https://www.fussball.de/static/por/8.92.0.1/css/style.css">
+<style>
+
+@font-face {
+  font-family: font-abcx9xlo;
+  src: url('../fonts/abcx9xlo.woff') format('woff');
+}
+.results-c-abcx9xlo { font-family: font-abcx9xlo !important; }
+html, body { margin: 0; padding: 0; background: #fff; }
+body { padding: 14px 16px; font: 13px/1.45 Arial, Helvetica, sans-serif; color: #20272c; overflow-x: auto; }
+.fbde-snapshot .table-container { border: 0; box-shadow: none; margin: 0; }
+.fbde-snapshot .team-matchplan-table-nav,
+.fbde-snapshot .filter-toggle,
+.fbde-snapshot .filter-content form,
+.fbde-snapshot .table-meta,
+.fbde-snapshot .legend,
+.fbde-snapshot .team_squad_tab_group,
+.fbde-snapshot .profile-edit,
+.fbde-snapshot .print,
+.fbde-snapshot .no-print,
+.fbde-snapshot .wm-container,
+.fbde-snapshot [data-wm-type],
+.fbde-snapshot .wm-iframe { display: none !important; }
+.fbde-snapshot .filter-content { display: block !important; }
+.fbde-snapshot .filter-message { display: block !important; margin: 10px 0; }
+.fbde-snapshot .filter-message .headline { display: block !important; }
+.fbde-snapshot .filter-message .headline { margin: 0; font-weight: 600; }
+.fbde-snapshot .filter-message .button { display: none !important; }
+.fbde-snapshot table { width: 100%; border-collapse: collapse; }
+.fbde-snapshot th,
+.fbde-snapshot td { padding: 7px 8px; border-bottom: 1px solid #e4e9ec; text-align: left; vertical-align: top; }
+.fbde-snapshot th { background: #f4f7f8; font-weight: 700; }
+.fbde-snapshot a { color: #008c8c; text-decoration: none; }
+.fbde-snapshot .player-name { font-weight: 600; }
+.fbde-snapshot-date { margin: 0 0 8px; color: #65717a; font-size: 11px; }
+</style>
+</head>
+<body class="fbde fbde-snapshot">
+<div class="fbde-snapshot-date">Datenstand: 15.11.2026</div>
+<div data-ng-controller="AjaxController" id="id-team-matchplan-table">
+	<div data-toggle=".filter-toggle" class="team-matchplan-table-nav table-filter">
+		<div class="filter-toggle">Filter<span class="icon-open"></span><span class="icon-close"></span></div>
+		<div class="filter-content">
+			<form data-ajax-type="json" data-ajax-forced="{'offset':0}" data-ng-controller="AjaxController" data-ajax-target=".club-matchplan-table" data-ajax-defaults="{'max':10}" data-ajax-resource="https://www.fussball.de/ajax.team.matchplan/-/mime-type/JSON/mode/PAGE/prev-season-allowed/false/show-filter/false/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" data-ajax="replace" data-tracking="{'href':'https://www.fussball.de/ajax.team.matchplan/-/mime-type/JSON/mode/PAGE/prev-season-allowed/false/show-filter/false/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU'}">
+				<input name="team-id" type="hidden" value="02M5AOKCI0000000VS5489B2VUHJA7LU">
+				<div class="row">
+					<div data-select-box="multiple" data-select-box-default="0" data-select-title="Wettbewerbe" class="select-wrapper" data-ajaxmodel="wettkampftyp" data-select-box-multiple="ausgewählt">
+						<select size="1" name="wettkampftyp" multiple>
+							<option value="-1">Alle</option>
+							<option value="1">Meisterschaften</option>
+							<option value="8">Pokale</option>
+							<option value="3">Turniere</option>
+							<option value="7">Freundschaftsspiele</option>
+							<option value="6">Privatspiele</option>
+							<option value="11">Futsal-Ligabetrieb</option>
+							<option value="2">Hallenturniere (Futsal)</option>
+							<option value="21">Beachsoccer-Meisterschaften</option>
+							<option value="9">Auswahlspiele</option>
+						</select>
+					</div>
+					<div data-select-box="multiple" data-select-box-default="0" data-select-title="Spiele" class="select-wrapper" data-ajaxmodel="match-type" data-select-box-multiple="ausgewählt">
+						<select size="1" name="match-type" multiple>
+							<option value="-1">Alle</option>
+							<option value="1">Heimspiele</option>
+							<option value="2">Auswärtsspiele</option>
+						</select>
+					</div>
+					<label data-checkbox="" class="checkbox" data-ajaxmodel="show-venues">
+						<span class="icon-verified"></span>
+						<input name="checked" type="checkbox" value="true">
+						<span class="label">Spielstätten <strong>anzeigen</strong></span>
+					</label>
+				</div>
+				<div class="row">
+					<div class="cal-group">
+						<div class="datepicker-wrapper">
+							<div data-ng-controller="MatchcalController" class="date datepicker label-wrapper">
+								<label for="matchplan-date-from">Von:</label>
+								<input data-ng-model="dt" data-ng-init="dt='2026-11-15'" name="datum-von" data-datepicker-popup="dd.MM.yyyy" data-is-open="opened" placeholder="Datum*" id="matchplan-date-from" type="text" value="" data-ajaxmodel="datum-von">
+								<label for="matchplan-date-from" data-ng-class="{'open':opened}"><span class="icon-matchcal"></span></label>
+							</div>
+						</div>
+						<div class="datepicker-wrapper">
+							<div data-ng-controller="MatchcalController" class="date datepicker label-wrapper">
+								<label for="matchplan-date-to">Bis:</label>
+								<input data-ng-model="dt" data-ng-init="dt='2027-06-30'" name="datum-bis" data-datepicker-popup="dd.MM.yyyy" data-is-open="opened" placeholder="Datum*" id="matchplan-date-to" type="text" value="" data-ajaxmodel="datum-bis">
+								<label for="matchplan-date-to" data-ng-class="{'open':opened}"><span class="icon-matchcal"></span></label>
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="button button-primary">los</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="table-container fixtures-matches-table club-matchplan-table">
+		<div class="hint-pre-publish"><span class="inner"><h5>Wichtiger Hinweis zum Spielplan</h5><p>Dieser Spielplan enthält vorläufige Spiele, die noch nicht vom Staffelleiter freigegeben worden sind. Bitte warte für weitere Informationen auf die finale Freigabe.</p></span></div>
+		<table class="table table-striped table-full-width">
+			<thead>
+				<tr class="thead hidden-small">
+					<th class="hidden-small">Datum | Zeit</th>
+					<th colspan="3">Wettbewerb</th>
+					<th colspan="2"><span class="hidden-small">Info</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Samstag, 13.03.2027 - 11:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="odd row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Sa, 13.03.27 |&nbsp;</span>11:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396067</a>
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-dipperz-dirlos-djk-sv-dirlos-hessen/-/saison/2627/team-id/011MIDDD6K000000VTVG0001VTR8C1K7" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Dipperz/Dirlos" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000006AVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Dipperz/&#8203;Dirlos
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-dipperz-dirlos/-/spiel/031IJ14FPC000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE65E;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE665;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-dipperz-dirlos/-/spiel/031IJ14FPC000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Dienstag, 06.04.2027 - 18:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Di, 06.04.27 |&nbsp;</span>18:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396078</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-suedring-2-tv-jahn-neuhof-hessen/-/saison/2627/team-id/0316TNPN90000000VS5489BSVSCPI5U4" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Südring 2" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007QVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Südring 2
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-suedring-2-jsg-rippberg/-/spiel/031IJ14FNO000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE65E;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE67D;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-suedring-2-jsg-rippberg/-/spiel/031IJ14FNO000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Samstag, 10.04.2027 - 11:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="odd row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Sa, 10.04.27 |&nbsp;</span>11:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396082</a>
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/hgm-fulda-2-sv-maberzell-hessen/-/saison/2627/team-id/02BCU2R8FK000000VS5489B2VU21J0QC" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="HGM Fulda 2" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007GVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								HGM Fulda 2
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-hgm-fulda-2/-/spiel/031IJ14F90000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE655;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE6B3;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-hgm-fulda-2/-/spiel/031IJ14F90000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Samstag, 17.04.2027 - 11:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Sa, 17.04.27 |&nbsp;</span>11:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396090</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-florenberg-sg-edelzell-hessen/-/saison/2627/team-id/011MICE5K4000000VTVG0001VTR8C1K7" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Florenberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000006CVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Florenberg
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-florenberg-jsg-rippberg/-/spiel/031IJ14F1G000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE67D;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE66E;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-florenberg-jsg-rippberg/-/spiel/031IJ14F1G000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Samstag, 24.04.2027 - 11:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="odd row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Sa, 24.04.27 |&nbsp;</span>11:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396092</a>
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-flieden-schweben-3-buchonia-flieden-hessen/-/saison/2627/team-id/0314PHD6DO000000VS5489BRVVV10ESU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Flieden/Schweben 3" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000006GVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Flieden/&#8203;Schweben 3
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-flieden-schweben-3/-/spiel/031IJ14EG0000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE665;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE672;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-flieden-schweben-3/-/spiel/031IJ14EG0000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Mittwoch, 05.05.2027 -  Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Mi, 05.05.27 |&nbsp;</span></td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396102</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border"><span class="info-text">spielfrei</span></td>
+					<td class="column-score"></td>
+					<td class="column-detail"></td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Samstag, 08.05.2027 - 11:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="odd row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Sa, 08.05.27 |&nbsp;</span>11:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396107</a>
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-luettertal-2-tsg-luetter-hessen/-/saison/2627/team-id/0318LBNI74000000VS5489BSVU0ORN69" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Lüttertal 2" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007FVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Lüttertal 2
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-luettertal-2/-/spiel/031IJ14E0S000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE67D;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE674;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-luettertal-2/-/spiel/031IJ14E0S000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Samstag, 22.05.2027 - 12:30 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Sa, 22.05.27 |&nbsp;</span>12:30</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396114</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-rhoen-2-sv-tann-rhoen-hessen/-/saison/2627/team-id/02BDFKUP6K000000VS5489B1VTPVH7C1" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rhön 2" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000008FVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rhön 2
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-rhoen-2-jsg-rippberg/-/spiel/031IJ14DO0000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE674;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE69F;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-rhoen-2-jsg-rippberg/-/spiel/031IJ14DO0000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Mittwoch, 26.05.2027 - 18:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="odd row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Mi, 26.05.27 |&nbsp;</span>18:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396117</a>
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-west-ring-3-sg-johannesberg-hessen/-/saison/2627/team-id/02TLOVGMNO000000VS5489BRVSEKAPAD" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG West Ring 3" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K0000076VV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG West Ring 3
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-west-ring-3/-/spiel/031IJ14D9K000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE69F;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE65E;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jsg-rippberg-jsg-west-ring-3/-/spiel/031IJ14D9K000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+				<tr class="row-headline visible-small">
+					<td colspan="6">Samstag, 29.05.2027 - 11:00 Uhr | 1.Kreisklasse/Kreisklasse</td>
+				</tr>
+				<tr class="row-competition hidden-small">
+					<td class="column-date"><span class="hidden-small inline">Sa, 29.05.27 |&nbsp;</span>11:00</td>
+					<td colspan="3" class="column-team">
+						<a>1.Kreisklasse/Kreisklasse</a>
+					</td>
+					<td colspan="2">
+						<a>ME | 341396126</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="hidden-small"></td>
+					<td class="column-club">
+						<a href="https://www.fussball.de/mannschaft/jfv-gemeinde-petersberg-2-jfv-gem-petersberg-fd-hessen/-/saison/2627/team-id/01L8HQFHG8000000VV0AG80NVVCEH5BC" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JFV Gemeinde Petersberg 2" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/01L830UJ10000000VV0AG80NVS589E83"></span></div>
+							<div class="club-name">
+								JFV Gemeinde Petersberg 2
+							</div>
+						</a>
+					</td>
+					<td class="column-colon">:</td>
+					<td class="column-club no-border">
+						<a href="https://www.fussball.de/mannschaft/jsg-rippberg-sg-hermania-loeschenrod-hessen/-/saison/2627/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" class="club-wrapper">
+							<div class="club-logo table-image"><span data-alt="JSG Rippberg" data-responsive-image="//www.fussball.de/export.media/-/action/getLogo/format/0/id/00ES8GN9K000007EVV0AG08LVUPGND5I"></span></div>
+							<div class="club-name">
+								JSG Rippberg
+							</div>
+						</a>
+					</td>
+					<td class="column-score">
+						<a href="https://www.fussball.de/spiel/jfv-gemeinde-petersberg-2-jsg-rippberg/-/spiel/031IJ14D5G000000VS5489BTVSRD0UH9"><span data-obfuscation="abcx9xlo" class="score-left">&#xE66E;</span><span class="colon">:</span><span data-obfuscation="abcx9xlo" class="score-right">&#xE6B3;</span></a>
+					</td>
+					<td class="column-detail">
+						<a href="https://www.fussball.de/spiel/jfv-gemeinde-petersberg-2-jsg-rippberg/-/spiel/031IJ14D5G000000VS5489BTVSRD0UH9"><span class="icon-angle-right hidden-full"></span><span class="visible-full">Zum Spiel<span class="icon-link-arrow"></span></span></a>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr class="load-more">
+					<td colspan="6">
+						<form data-ajax-type="json" data-ajax-target=".club-matchplan-table tbody" data-ajax-defaults="{'max':10,'offset':10}" data-ajax-resource="https://www.fussball.de/ajax.team.matchplan.loadmore/-/datum-bis/2027-06-30/datum-von/2026-11-15/id/00ES8GN9K000007EVV0AG08LVUPGND5I/match-type/-1/mime-type/JSON/mode/PAGE/show-venues/false/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" data-ajax="append" data-tracking="{'href':'https://www.fussball.de/ajax.team.matchplan.loadmore/-/datum-bis/2027-06-30/datum-von/2026-11-15/id/00ES8GN9K000007EVV0AG08LVUPGND5I/match-type/-1/mime-type/JSON/mode/PAGE/show-venues/false/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU'}">
+							<button type="submit" class="load-more-button">Mehr laden<span class="icon-arrow-down"></span></button>
+						</form>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<div data-toggle=".legend > span, .note > span" class="table-meta">
+			<ul class="functions">
+				<li class="legend"><span data-toggle-content=".table-legend">Legende<span class="icon-angle-down"></span></span></li>
+				<li class="print">
+					<a href="https://www.fussball.de/vereinsspielplan.druck/-/datum-bis/2027-06-30/datum-von/2026-11-15/id/00ES8GN9K000007EVV0AG08LVUPGND5I/match-type/-1/max/999/mode/PRINT/show-venues/false/team-id/02M5AOKCI0000000VS5489B2VUHJA7LU" target="_blank">Drucken<span class="icon-link-arrow"></span></a>
+				</li>
+			</ul>
+			<div class="table-legend">
+				<h3>Kürzel bei einem Spiel</h3>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span>u</span></div>
+							<div class="description">(U) Sportgerichtsurteil (bestätigt)</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>Annuliert</span></div>
+							<div class="description">Annullierung</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>v</span></div>
+							<div class="description">(V) Verwaltungsentscheid (bestätigt)</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span>Absetzung</span></div>
+							<div class="description">Spielabsetzung</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>w</span></div>
+							<div class="description">(W) Wertung Spielinstanz (bestätigt)</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>Ausfall</span></div>
+							<div class="description">Spielausfall</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span>t</span></div>
+							<div class="description">(T) Testspiel (bestätigt)</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>Abbruch</span></div>
+							<div class="description">Spielabbruch</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>zg.</span></div>
+							<div class="description">Diese Mannschaft wurde zurückgezogen, die Ergebnisse werden aber eingerechnet.</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span>Nichtantritt BEIDE</span></div>
+							<div class="description">nicht angetretene Mannschaften</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>Nichtantritt HEIM</span></div>
+							<div class="description">nicht angetreten HEIM-Mannschaft</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>Nichtantritt GAST</span></div>
+							<div class="description">nicht angetreten GAST-Mannschaft</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span>nV</span></div>
+							<div class="description">nach Verlängerung</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>nE</span></div>
+							<div class="description">nach Elfmeterschießen</div>
+						</div>
+					</div>
+				</div>
+				<h3>Sonstiges</h3>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span>**</span></div>
+							<div class="description">Die Anstoßzeit steht noch nicht fest oder ist nicht bekannt.</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>o.E.</span></div>
+							<div class="description">Keine Ergebnisanzeige, da die Staffel nicht im Leistungsbetrieb spielt.</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>oW</span></div>
+							<div class="description">Mannschaften mit diesem Kennzeichen spielen außer Konkurrenz.</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span class="icon-verified"></span></div>
+							<div class="description">Ergebnis bestätigt</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>Live</span></div>
+							<div class="description">Liveticker</div>
+						</div>
+						<div class="column">
+							<div class="item"><span>SPIELFREI</span></div>
+							<div class="description">An diesem Datum hat die Mannschaft spielfrei.</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span class="icon-article"></span></div>
+							<div class="description">Spielbericht vorhanden</div>
+						</div>
+						<div class="column">
+							<div class="item"><span class="icon-foto"></span></div>
+							<div class="description">Foto oder Video vorhanden</div>
+						</div>
+						<div class="column">
+							<div class="item"><span class="icon-video"></span></div>
+							<div class="description">Livestream oder Highlights vorhanden</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wrapper">
+						<div class="column">
+							<div class="item"><span class="icon-pre-publish"></span></div>
+							<div class="description">vorläufiges Spiel</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+document.querySelectorAll('[data-obfuscation]').forEach(function (el) {
+  el.classList.add('results-c-' + el.dataset.obfuscation);
+});
+document.querySelectorAll('.filter-message .button').forEach(function (el) {
+  el.style.setProperty('display', 'none', 'important');
+});
+if (!document.querySelector('.filter-message') && document.querySelectorAll('table tr').length <= 1) {
+  var div = document.createElement('div');
+  div.className = 'team-squad-filter-nav table-filter';
+  div.innerHTML = '<div class="filter-message"><div class="row"><p class="headline">Keine Einträge vorhanden.</p></div></div>';
+  document.body.appendChild(div);
+}
+</script>
+</body>
+</html>

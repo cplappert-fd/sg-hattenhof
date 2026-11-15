@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90d9"/>
+      <stop offset="100%" style="stop-color:#87ceeb"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d7d2d"/>
+      <stop offset="100%" style="stop-color:#1a5c1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky)"/>
+  <rect y="280" width="800" height="170" fill="url(#grass)"/>
+  <ellipse cx="400" cy="320" rx="200" ry="40" fill="#1a4a1a" opacity="0.3"/>
+  <rect x="250" y="200" width="300" height="80" fill="#8b4513" rx="5"/>
+  <rect x="270" y="210" width="80" height="60" fill="#654321" rx="3"/>
+  <rect x="450" y="210" width="80" height="60" fill="#654321" rx="3"/>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" opacity="0.8">SPORTANLAGE AM RIPPBERG</text>
+  <text x="400" y="410" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.6">Rasenplätze · Tennisplätze · LED-Anzeigetafel</text>
+</svg>

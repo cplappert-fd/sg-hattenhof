@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="scripts/update-football.js">
+<link rel="stylesheet" href="https://www.fussball.de/static/por/8.92.0.1/css/style.css">
+<style>
+
+@font-face {
+  font-family: font-bdby0mgt;
+  src: url('../fonts/bdby0mgt.woff') format('woff');
+}
+.results-c-bdby0mgt { font-family: font-bdby0mgt !important; }
+html, body { margin: 0; padding: 0; background: #fff; }
+body { padding: 14px 16px; font: 13px/1.45 Arial, Helvetica, sans-serif; color: #20272c; overflow-x: auto; }
+.fbde-snapshot .table-container { border: 0; box-shadow: none; margin: 0; }
+.fbde-snapshot .team-matchplan-table-nav,
+.fbde-snapshot .filter-toggle,
+.fbde-snapshot .filter-content form,
+.fbde-snapshot .table-meta,
+.fbde-snapshot .legend,
+.fbde-snapshot .team_squad_tab_group,
+.fbde-snapshot .profile-edit,
+.fbde-snapshot .print,
+.fbde-snapshot .no-print,
+.fbde-snapshot .wm-container,
+.fbde-snapshot [data-wm-type],
+.fbde-snapshot .wm-iframe { display: none !important; }
+.fbde-snapshot .filter-content { display: block !important; }
+.fbde-snapshot .filter-message { display: block !important; margin: 10px 0; }
+.fbde-snapshot .filter-message .headline { display: block !important; }
+.fbde-snapshot .filter-message .headline { margin: 0; font-weight: 600; }
+.fbde-snapshot .filter-message .button { display: none !important; }
+.fbde-snapshot table { width: 100%; border-collapse: collapse; }
+.fbde-snapshot th,
+.fbde-snapshot td { padding: 7px 8px; border-bottom: 1px solid #e4e9ec; text-align: left; vertical-align: top; }
+.fbde-snapshot th { background: #f4f7f8; font-weight: 700; }
+.fbde-snapshot a { color: #008c8c; text-decoration: none; }
+.fbde-snapshot .player-name { font-weight: 600; }
+.fbde-snapshot-date { margin: 0 0 8px; color: #65717a; font-size: 11px; }
+</style>
+</head>
+<body class="fbde fbde-snapshot">
+<div class="fbde-snapshot-date">Datenstand: 15.11.2026</div>
+<div id="team-squad-wrapper">
+	<div class="team_squad_tab_group">
+		<div data-toggle="li a" data-ng-controller="AjaxController" data-type="ajax" class="tab-group" data-tab-group>
+			<a class="prev"><span class="icon-angle-left"></span></a>
+			<ul>
+				<li class="on">
+					<a data-tracking-name="mannschaft_kader/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" data-tracking-pagename-short="mannschaft" data-tracking-channel="vereine_verbaende" data-ajax-type="html" data-tracking-pagename-long="mannschaft_kader" data-ajax-target="#team-squad-wrapper" data-ajax-resource="https://www.fussball.de/ajax.team.squad/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" href="https://www.fussball.de/ajax.team.squad/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" data-tracking-enabled="" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7'}" data-ajax>Kader</a>
+				</li>
+				<li>
+					<a data-tracking-name="mannschaft_neuzugaenge/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" data-tracking-pagename-short="mannschaft" data-tracking-channel="vereine_verbaende" data-ajax-type="html" data-tracking-pagename-long="mannschaft_neuzugaenge" data-ajax-target="#team-squad-wrapper" data-ajax-resource="https://www.fussball.de/ajax.team.squad.arrivals/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" href="https://www.fussball.de/ajax.team.squad.arrivals/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" data-tracking-enabled="" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad.arrivals/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7'}" data-ajax>Neuzugänge</a>
+				</li>
+				<li>
+					<a data-tracking-name="mannschaft_abgaenge/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" data-tracking-pagename-short="mannschaft" data-tracking-channel="vereine_verbaende" data-ajax-type="html" data-tracking-pagename-long="mannschaft_abgaenge" data-ajax-target="#team-squad-wrapper" data-ajax-resource="https://www.fussball.de/ajax.team.squad.departures/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" href="https://www.fussball.de/ajax.team.squad.departures/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" data-tracking-enabled="" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad.departures/-/mode/PAGE/order-by/1/saison/2627/show-filter/true/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7'}" data-ajax>Abgänge</a>
+				</li>
+			</ul>
+			<a class="next"><span class="icon-angle-right"></span></a>
+		</div>
+	</div>
+	<div>
+		<div class="team-squad-table">
+			<div data-toggle=".filter-toggle" data-ng-controller="AjaxController" class="team-squad-filter-nav table-filter">
+				<div class="filter-toggle">Filter<span class="icon-close"></span></div>
+				<div class="filter-content">
+					<div class="row">
+						<form data-ajax-type="html" data-ajax-target="#team-squad-wrapper" data-ajax-defaults="{'saison':'26/27', 'order-by': '1'}" data-ajax-resource="https://www.fussball.de/ajax.team.squad/-/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7" data-ajax="replace" data-ajax-method="post" data-tracking="{'href':'https://www.fussball.de/ajax.team.squad/-/team-id/02BB8NKPIK000000VS5489B2VVDBHQQ7'}">
+							<div data-select-box="single" data-select-box-default="0" data-select-title="Saison" class="select-wrapper" data-ajaxmodel="saison">
+								<select size="1" name="saison">
+									<option value="2627" class="selected" selected="selected">2026/2027</option>
+									<option value="2526">2025/2026</option>
+									<option value="2425">2024/2025</option>
+								</select>
+							</div>
+							<div data-select-box="single" data-select-box-default="0" data-select-title="Sortiert nach" class="select-wrapper" data-ajaxmodel="order-by">
+								<select size="1" name="order-by">
+									<option value="1" class="selected" selected="selected">Einsätze</option>
+									<option value="2">Spieler</option>
+									<option value="5">Einsatzminuten</option>
+									<option value="6">Tore</option>
+								</select>
+							</div>
+							<button type="submit" class="button button-primary">Los</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="table-background">
+				<div>
+					<div data-wm-type="sky" class="wm-container wm-spm hide-ad" data-ad-spm>
+						<div class="wm-container-inner">
+							<div class="wm-iframe">
+								<p>Anzeige</p>
+								<div id="SPMADS_DFB-FB_SKYSCRAPER"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="table-container table-full">
+					<table class="table table-striped table-full-width">
+						<thead>
+							<tr class="thead">
+								<th>Spieler</th>
+								<th>Einsätze</th>
+								<th class="hidden-small">Einsatzminuten</th>
+								<th>Tore</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02JTQQ0L7S000000VUM1DNOPVTQMMI2D" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xED2E;&#xEA44;&#xE842;&#xEF9F;&#xEE76;&#xEA73;&#xEF95;&#x0020;&#xED19;&#xE6D0;&#xE7BE;&#xE9CD;&#xECB4;</span></div>
+									</a>
+								</td>
+								<td>15</td>
+								<td class="hidden-small">1350</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02T16RKJB8000000VUM1D51VVVQ9R00M" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/027O082DEC000000VS5489B5VUV17BMB.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEE89;&#xE80A;&#xE7BE;&#xEF95;&#x0020;&#xEB31;&#xEE76;&#xE756;&#xEB2F;&#xE9CD;&#xEE61;&#xE9CC;</span></div>
+									</a>
+								</td>
+								<td>15</td>
+								<td class="hidden-small">1350</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02J52D4FG0000000VUM1DNOKVUKQOCS9" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/02LAJ03BA0000000VS5489B9VUL198U5.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEDCA;&#xED5A;&#xE818;&#xEE61;&#xE80A;&#xEE61;&#xE7BE;&#xEF95;&#x0020;&#xEA57;&#xE756;&#xF006;</span></div>
+									</a>
+								</td>
+								<td>15</td>
+								<td class="hidden-small">1295</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02FKCP73GO000000VUM1DNP5VU5PVP3B" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://res.cloudinary.com/dfb-de/image/upload/b_rgb:e1e1e1,c_fill,g_auto,h_350,w_261/v1/user_generated_content/ugc_fbde/6cc0d2ac-8a21-46ec-90a7-8be4a90b14c0?_a=DAGCg+MhZAA0"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEE37;&#xE80A;&#xEF1C;&#xEE77;&#xE9CD;&#xEE76;&#xEF95;&#x0020;&#xEA28;&#xE9CD;&#xE794;&#xEE61;</span></div>
+									</a>
+								</td>
+								<td>13</td>
+								<td class="hidden-small">1074</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/031UHUPPG4000000VUM1D52NVUAMP2GT" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031LEPS3NS000000VS5489C1VVO8EMLD.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xE7CE;&#xE756;&#xECB4;&#xE72D;&#xEA26;&#xEE76;&#xE9CD;&#xEB2F;&#xEF95;&#x0020;&#xEB67;&#xEF24;&#xE9CD;&#xEE76;</span></div>
+									</a>
+								</td>
+								<td>13</td>
+								<td class="hidden-small">1026</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02J0J3B8PC000000VUM1DNO6VTU6KG7H" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/0281B01KVS000000VS5489BBVSERBDJP.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xED80;&#xED5A;&#xE845;&#xECB4;&#xEA2D;&#xEDE2;&#xECFF;&#xE9CD;&#xEF95;&#x0020;&#xEA28;&#xEFF3;&#xECFF;&#xED5A;&#xE9CC;</span></div>
+									</a>
+								</td>
+								<td>12</td>
+								<td class="hidden-small">1080</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/022TI6O5QO000000VS54898GVVV1H0DN" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031DHO0VHO000000VS5489BSVTI5QPQ9.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA57;&#xE756;&#xE818;&#xE756;&#xEF97;&#xE756;&#xEF95;&#x0020;&#xE73B;&#xE6D0;&#xEB2F;&#xE7AC;&#xEA26;&#xE9CC;</span></div>
+									</a>
+								</td>
+								<td>12</td>
+								<td class="hidden-small">1021</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02HJR3OHAC000000VUM1DNRIVUKDR7T4" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://res.cloudinary.com/dfb-de/image/upload/b_rgb:e1e1e1,c_fill,g_auto,h_350,w_261/v1/user_generated_content/ugc_fbde/a23ccf2b-514f-4b79-9b49-8042c393aff0?_a=DAGCg+MhZAA0"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA54;&#xEA14;&#xE968;&#xEA26;&#xEFF3;&#xEC61;&#xEF95;&#x0020;&#xEB31;&#xEDE2;&#xE6D0;&#xEDD9;&#xECB4;&#xEF03;&#xEDD9;&#xEA26;&#xF006;</span></div>
+									</a>
+								</td>
+								<td>10</td>
+								<td class="hidden-small">855</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02T51GVE74000000VUM1D51CVV0IS1JV" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/027KHQFD6G000000VS5489B9VV0H9FPN.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xE95E;&#xE6D0;&#xE794;&#xE794;&#xF006;&#xF03C;&#x0020;&#xE685;&#xED5A;&#xE9CC;&#xEA2D;&#xED5A;&#xF084;</span></div>
+									</a>
+								</td>
+								<td>10</td>
+								<td class="hidden-small">683</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02QPJ040EO000000VUM1D510VUE66US6" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://res.cloudinary.com/dfb-de/image/upload/b_rgb:e1e1e1,c_fill,g_auto,h_350,w_261/v1/user_generated_content/ugc_fbde/60aeff6a-cfd3-43ae-a346-18d4f58b508f?_a=DAGCg+MhZAA0"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEC2E;&#xEA14;&#xE968;&#xEFF3;&#xEDDE;&#xED5A;&#xEA2D;&#xEDE2;&#xE9CD;&#xE818;&#xF03C;&#x0020;&#xEA30;&#xED5A;&#xEFF3;&#xE818;&#xEDD9;&#xEA14;&#xE756;</span></div>
+									</a>
+								</td>
+								<td>10</td>
+								<td class="hidden-small">652</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00R9QEU5EO000000VV0AG85VVUJPKL05" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/027UHHLOOG000000VS5489BCVVK7ONKD.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA30;&#xEA26;&#xEF03;&#xE9CC;&#xEA14;&#xE968;&#xECFF;&#xE9CD;&#xEF95;&#x0020;&#xEF37;&#xEA73;&#xECFF;&#xF084;&#xED5A;&#xECB4;</span></div>
+									</a>
+								</td>
+								<td>8</td>
+								<td class="hidden-small">644</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00R9QUTCPC000000VV0AG85VVUJPKL05" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/027KHQJSUO000000VS5489B9VV0H9FPN.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEC2E;&#xEFF3;&#xE7BE;&#xE7E9;&#xECB4;&#xEF95;&#x0020;&#xE6D6;&#xE7AC;&#xE818;&#xE794;&#xF006;&#xE9CD;&#x0020;&#xEA7B;&#xE756;&#xE818;&#xE756;&#xEDDE;&#xEF9F;</span></div>
+									</a>
+								</td>
+								<td>8</td>
+								<td class="hidden-small">469</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/019ERB9UA8000000VV0AG80NVV3VA9T2" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xED80;&#xED5A;&#xE6D0;&#xEDD1;&#xF03C;&#x0020;&#xEB67;&#xE842;&#xE818;&#xEA73;&#xEA26;&#xEE61;</span></div>
+									</a>
+								</td>
+								<td>8</td>
+								<td class="hidden-small">216</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/02FJG4PO80000000VUM1DNOTVTAUOFKG" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA54;&#xE9CD;&#xF006;&#xE7E9;&#xEF95;&#x0020;&#xEC2E;&#xEA26;&#xEB2F;&#xE80A;&#xE756;&#xF084;</span></div>
+									</a>
+								</td>
+								<td>5</td>
+								<td class="hidden-small">450</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031UOSUQVK000000VS5489C2VUEQ0MPT" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/0322N0F26O000000VS5489C0VUV4EK93.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xE820;&#xEA26;&#xF02E;&#xEDD9;&#xE756;&#xE818;&#x0020;&#xECBF;&#xE794;&#xE9CC;&#x0020;&#xEA54;&#xEA26;&#xEE61;&#xE845;&#xE794;&#xECB4;&#xF03C;&#x0020;&#xE77B;&#xE794;&#xEA26;&#xE794;&#x0020;&#xE685;&#xE9CD;&#xE80E;&#xE6D0;&#xE794;</span></div>
+									</a>
+								</td>
+								<td>5</td>
+								<td class="hidden-small">312</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00R9QJENE0000000VV0AG85VVUJPKL05" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/0320OBRKFK000000VS5489BVVSVKPN1H.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA30;&#xED5A;&#xEDE2;&#xE6D0;&#xEF95;&#x0020;&#xE77B;&#xE794;&#xF006;&#xEA26;&#xE9CC;</span></div>
+									</a>
+								</td>
+								<td>4</td>
+								<td class="hidden-small">360</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031B2TRETK000000VS5489C2VSRVARN3" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031ITC402O000000VS5489BVVUE0RTVR.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEC2E;&#xE756;&#xE7E9;&#xED5A;&#xE845;&#xE9CD;&#xEE76;&#xEA73;&#x0020;&#xE772;&#xE794;&#xE7E9;&#xEFF3;&#xE9CD;&#xEDD9;&#xE818;&#xED5A;&#xF03C;&#x0020;&#xEECC;&#xED5A;&#xEF9F;&#xECFD;&#xE80A;&#xE756;</span></div>
+									</a>
+								</td>
+								<td>4</td>
+								<td class="hidden-small">315</td>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/01SGD991DC000000VS548985VU0TRHO1" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/02JAFR6SOC000000VS5489B5VSJMBIGK.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xE904;&#xE794;&#xE85C;&#xEB2F;&#xEA26;&#xF006;&#xEE61;&#xF03C;&#x0020;&#xEA28;&#xEA73;&#xF006;&#xEFF3;&#xECB4;</span></div>
+									</a>
+								</td>
+								<td>3</td>
+								<td class="hidden-small">270</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031B46U0J4000000VS5489C1VSN5ODGG" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA54;&#xEA73;&#xECFD;&#xEFF3;&#xE9CD;&#xEA73;&#xE818;&#xED5A;&#x0020;&#xEA54;&#xE794;&#xEA26;&#xE6D0;&#xE9CD;&#xE9CC;&#xEF95;&#x0020;&#xE9A4;&#xEA26;&#xF006;&#xEE61;&#xEA73;&#xE9CD;&#xEE76;</span></div>
+									</a>
+								</td>
+								<td>3</td>
+								<td class="hidden-small">270</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/01LMM3QPRO000000VS541L4JVSP54J9F" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/027KHMU85K000000VS5489B9VV0H9FPN.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEEC4;&#xE756;&#xEDD9;&#xEB2F;&#xED5A;&#xF006;&#xEE61;&#xEF95;&#x0020;&#xE9A4;&#xE9CD;&#xF006;&#xF006;&#xEA73;&#xE9CC;</span></div>
+									</a>
+								</td>
+								<td>3</td>
+								<td class="hidden-small">270</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031B32TVB0000000VS5489C2VSRVARN3" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/0320OJ5D3G000000VS5489C2VVEV4L4T.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEE89;&#xE80A;&#xEA2D;&#xEDE2;&#xE9CD;&#x0020;&#xEDCA;&#xEA26;&#xE818;&#xEA73;&#xEA26;&#xE9CC;&#xF03C;&#x0020;&#xEEBD;&#xE9CD;&#xEDD9;&#xE845;&#xE794;&#xE6D0;</span></div>
+									</a>
+								</td>
+								<td>3</td>
+								<td class="hidden-small">240</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00R9R43GL4000000VV0AG85VVUJPKL05" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031PV2RAN8000000VS5489BUVUSSQB09.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEE89;&#xEA26;&#xE7AC;&#xE9CD;&#xE818;&#xF03C;&#x0020;&#xEE89;&#xE756;&#xF006;&#xEF05;&#xEA26;&#xEB2F;&#xEA73;&#xF006;</span></div>
+									</a>
+								</td>
+								<td>3</td>
+								<td class="hidden-small">198</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/01LMMCEC1S000000VS541L4FVUT71JQ7" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xE716;&#xE9CD;&#xE6D0;&#xEB2F;&#xEA26;&#xEE61;&#xEE61;&#xEF95;&#x0020;&#xED80;&#xED5A;&#xE845;&#xE845;&#xE968;&#xEDD9;&#xEA26;&#xE9CC;</span></div>
+									</a>
+								</td>
+								<td>3</td>
+								<td class="hidden-small">180</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00R9QEU57C000000VV0AG85VVUJPKL05" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/027UHI57R4000000VS5489BCVVK7ONKD.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xED80;&#xEEAE;&#xF084;&#xEA73;&#xEF03;&#xE794;&#xE818;&#xEF95;&#x0020;&#xEE37;&#xED5A;&#xEA73;&#xF006;&#xE756;&#xE818;</span></div>
+									</a>
+								</td>
+								<td>3</td>
+								<td class="hidden-small">34</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031B326D3K000000VS5489C2VSRVARN3" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/0320OJB4HG000000VS5489C2VVEV4L4T.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xE9E3;&#xEEAE;&#xECB4;&#xED5A;&#xF03C;&#x0020;&#xE95E;&#xEA26;&#xE818;&#xF084;&#xEEAE;&#xECB4;&#x0020;&#xEF0C;&#xE842;&#xE80A;&#xED5A;&#xE6D0;&#xE80E;&#xEEAE;</span></div>
+									</a>
+								</td>
+								<td>2</td>
+								<td class="hidden-small">180</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031B30FRR8000000VS5489C2VSRVARN3" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031ITBSKEG000000VS5489BVVUE0RTVR.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEE89;&#xED5A;&#xED5A;&#xE842;&#xE9CD;&#xE6D0;&#x0020;&#xE9E3;&#xEEAE;&#xE80E;&#xE818;&#xEA73;&#xE7E9;&#xE80A;&#xE9CD;&#xE9CC;&#xEF95;&#x0020;&#xEA30;&#xED5A;&#xEF03;&#xE968;&#xE756;&#xEFF3;&#xECB4;</span></div>
+									</a>
+								</td>
+								<td>2</td>
+								<td class="hidden-small">110</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00SBE64114000000VV0AG811VV935U8L" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031E48BD3C000000VS5489C1VV0DHQMK.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA57;&#xE80A;&#xEE76;&#xEE76;&#xE756;&#xE6D0;&#xEF95;&#x0020;&#xECBF;&#xEA73;&#xEB2F;&#xEDD9;&#xEF03;&#xE6D0;&#xEDD9;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">90</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/userid/01T8SU0CG8000000VS541L4QVUCGEE1B" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://res.cloudinary.com/dfb-de/image/upload/b_rgb:e1e1e1,c_fill,g_auto,h_350,w_261/v1/user_generated_content/ugc_fbde/11afaefc-cdae-456c-9a29-746be50a55e8?_a=DAGCg+MhZAA0"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xE9A4;&#xED5A;&#xEE76;&#xEA73;&#xEF03;&#xEC1A;&#xEF95;&#x0020;&#xE787;&#xE6D0;&#xE756;&#xE842;&#xE9CD;&#xE6D0;&#xEA73;&#xECFF;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">90</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/01IL120VA8000000VV0AG80NVSPK2NRH" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031DHO5SQ0000000VS5489BSVTI5QPQ9.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEEBD;&#xE756;&#xEDD9;&#xF006;&#xE9CD;&#xE6D0;&#xF03C;&#x0020;&#xE8FA;&#xEA26;&#xEFF3;&#xE818;&#xEDD9;&#xEE61;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">90</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031707ODPS000000VS5489C1VSN5ODGG" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031HVVDPDO000000VS5489C1VV0DHQMK.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEE37;&#xEEAE;&#xE80E;&#xE818;&#xEA73;&#xE7BE;&#xE80A;&#xE756;&#xECB4;&#x0020;&#xE80E;&#xE9CD;&#x0020;&#xEA7B;&#xE756;&#xE9CC;&#xEFF3;&#xE9CC;&#xEF95;&#x0020;&#xE8FA;&#xEFF3;&#xEDD9;&#xE8A7;&#x0020;&#xE716;&#xEFF3;&#xEDD9;&#xF084;&#xE968;&#xE9CD;&#xE6D0;&#xEB2F;&#xE756;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">90</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/02VO0HIGI0000000VS5489C1VUGQ4C5S" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA54;&#xEDE2;&#xE794;&#xEF1C;&#xEEAE;&#xE9CC;&#xECFF;&#xEA73;&#xEF95;&#x0020;&#xEA28;&#xE756;&#xEEAE;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">90</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031H6J1C80000000VS5489C2VUNIGE37" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031ITCB0I4000000VS5489BVVUE0RTVR.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEC2E;&#xEA73;&#xF084;&#xF02E;&#xED5A;&#x0020;&#xE9E3;&#xEDD9;&#xEC61;&#xEA26;&#xECB4;&#xEF95;&#x0020;&#xE9E3;&#xEA26;&#xE72D;&#xEA26;&#xE9CD;&#xEE76;&#xF084;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">90</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/031B3190LG000000VS5489C1VSN5ODGG" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/0320OIVBMO000000VS5489C2VVEV4L4T.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEE89;&#xE9CD;&#xEE61;&#xE756;&#xE845;&#xEF03;&#xEDD9;&#xEF95;&#x0020;&#xEF2C;&#xEFF3;&#xE9CC;&#xE845;&#xEA26;&#xF02E;&#xEEAE;&#x0020;&#xEEBD;&#xE756;&#xEE61;&#xE818;&#xEA73;&#xEA33;&#xEFF3;&#xE9CD;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">35</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00R9QT35MO000000VV0AG85VVUJPKL05" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEEC4;&#xEA73;&#xE756;&#xF084;&#xE9CD;&#xF006;&#xE80E;&#xE756;&#xE6D0;&#xEF95;&#x0020;&#xE716;&#xE9CD;&#xE818;&#xE818;&#xEDD9;&#xEF03;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">12</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00PPDUIGMG000000VV0AG83KVS3M3IR5" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/031E48SEDC000000VS5489C1VV0DHQMK.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xED80;&#xED5A;&#xEA2D;&#xE968;&#xF03C;&#x0020;&#xE9A4;&#xED5A;&#xF02E;&#xEA73;&#xE842;</span></div>
+									</a>
+								</td>
+								<td>1</td>
+								<td class="hidden-small">7</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00R9QNKKU0000000VV0AG85VVUJPKL05" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/02QDDBLK8K000000VS5489B3VTUO58HK.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xED2E;&#xEF9F;&#xEF95;&#x0020;&#xE9A4;&#xE756;&#xF02E;&#xE6D0;&#xEA26;&#xEE61;</span></div>
+									</a>
+								</td>
+								<td>&nbsp;</td>
+								<td class="hidden-small">&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00V5KI661C000000VV0AG811VTSOL276" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/027M232BOK000000VS5489B4VSC1CM86.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA57;&#xE80A;&#xE7E9;&#xF03C;&#x0020;&#xE77B;&#xEEAE;&#xE968;&#xEA26;&#xF006;&#xF006;&#xE756;&#xE9CC;</span></div>
+									</a>
+								</td>
+								<td>&nbsp;</td>
+								<td class="hidden-small">&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/00LN6IUVIK000000VV0AG85VVTNE19SS" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEA28;&#xE794;&#xE968;&#xE9CC;&#xE756;&#xF03C;&#x0020;&#xEC2E;&#xEDD9;&#xF084;&#xF02E;&#xEDD9;&#xEEAE;</span></div>
+									</a>
+								</td>
+								<td>&nbsp;</td>
+								<td class="hidden-small">&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/02S4ND7GU0000000VS5489B7VT1PTU3B" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/02SDHKN5Q8000000VS5489B7VUT39373.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEF37;&#xEFF3;&#xEE61;&#xE756;&#xE9CC;&#x0020;&#xEA57;&#xE756;&#xF006;&#xF02E;&#xEDD9;&#xF006;&#xE80E;&#xEEAE;&#x0020;&#xE9A4;&#xE756;&#x0020;&#xEA54;&#xE794;&#xEFF3;&#xE9CC;&#xEA26;&#xEF95;&#x0020;&#xEF2C;&#xEFF3;&#xEA73;&#xEE76;&#xE968;&#xE9CD;&#xE818;&#xEDDE;&#xE756;</span></div>
+									</a>
+								</td>
+								<td>&nbsp;</td>
+								<td class="hidden-small">&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/01MB55OA7S000000VV0AG80NVT1D3OB3" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="//www.fussball.de/export.media/-/action/getPlayerImage/format/15/image-id/NPI_1234567890123456789012345678"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEC2E;&#xEFF3;&#xE7BE;&#xE7BE;&#xECB4;&#xEF95;&#x0020;&#xE6D6;&#xEF9F;&#xE6D0;&#xE9CD;&#xECB4;&#xE9CD;</span></div>
+									</a>
+								</td>
+								<td>&nbsp;</td>
+								<td class="hidden-small">&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="column-player">
+									<a href="https://www.fussball.de/spielerprofil/-/player-id/01OOMPP8TK000000VV0AG80NVTESEL0E" class="player-wrapper">
+										<div class="player-image table-image hidden-small"><span data-alt="player-thumbnail" data-responsive-image="https://cdn.fussball.de/public/02C1NUVSDK000000VS5489B5VSKVIKAT.stamp"></span></div>
+										<div class="player-name"><span data-obfuscation="bdby0mgt">&#xEEC4;&#xE794;&#xF084;&#xE72D;&#xEF95;&#x0020;&#xEB31;&#xEDE2;&#xE818;&#xEA73;&#xECB4;&#xE845;&#xEA73;&#xEA26;&#xF006;</span></div>
+									</a>
+								</td>
+								<td>&nbsp;</td>
+								<td class="hidden-small">&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div data-wm-type="super" class="wm-container wm-spm hide-ad" data-ad-spm>
+				<div class="wm-container-inner">
+					<div class="wm-iframe">
+						<p>Anzeige</p>
+						<div id="SPMADS_DFB-FB_SUPERBANNER-2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+document.querySelectorAll('[data-obfuscation]').forEach(function (el) {
+  el.classList.add('results-c-' + el.dataset.obfuscation);
+});
+document.querySelectorAll('.filter-message .button').forEach(function (el) {
+  el.style.setProperty('display', 'none', 'important');
+});
+if (!document.querySelector('.filter-message') && document.querySelectorAll('table tr').length <= 1) {
+  var div = document.createElement('div');
+  div.className = 'team-squad-filter-nav table-filter';
+  div.innerHTML = '<div class="filter-message"><div class="row"><p class="headline">Keine Einträge vorhanden.</p></div></div>';
+  document.body.appendChild(div);
+}
+</script>
+</body>
+</html>
